@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Home</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="../static/css/jquery-ui.min.css"
+	th:href="@{/css/jquery-ui.min.css}">
+
+<link rel="stylesheet" href="../static/css/style2.css"
+	th:href="@{/css/style2.css}">
+
+<script type="text/javascript"
+	src="../static/js/bs-custom-file-input.min.js"
+	th:src="@{/js/bs-custom-file-input.min.js}"></script>
+<script type="text/javascript"
+	src="../static/js/bs-custom-file-input.js"
+	th:src="@{/js/bs-custom-file-input.js}"></script>
+<script type="text/javascript" src="../static/js/jquery-3.4.1.min.js"
+	th:src="@{/js/jquery-3.4.1.min.js}"></script>
+
+</head>
+<body>
+
+	<header class="text-center">
+		<h1>Traveller blog</h1>
+	</header>
+	<hr>
+	<nav>
+		<script type="text/javascript" src="../static/js/jquery-3.4.1.min.js"
+			th:src="@{/js/jquery-3.4.1.min.js}"></script>
+
+		<div class="text-center">
+			<div class="text-center">
+				<a href="#" th:href="@{/post/newPost}">
+					<button class="btn btn-info">Add New Entry</button>
+				</a> 
+				<a href="/post/blogs" th:href="@{/post/blogs}">
+					<button class="btn btn-info">View Blog</button>
+				</a>
+			</div>
+		</div>
+	</nav>
+	<br>
+	<br>
+</body>
+</html>

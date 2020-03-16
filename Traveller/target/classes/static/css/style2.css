@@ -1,0 +1,33 @@
+*
+{
+	padding-left:0px;
+	margin-left:0px;
+	
+}
+#form-div
+{
+	margin-top:50px;
+	width:50%;
+	background-color: #f0cbcb;
+}
+form
+{
+	margin-left:70px;
+}
+#createpost
+{
+	margin-right:120px;
+}
+.view-blogs
+{
+	margin-left:30px;
+	margin-top:20px;
+	float:left;
+}
+h1 {
+  text-shadow: 0 0 3px #FF0000;
+}
+hr
+{
+	border:2px  solid black;
+}

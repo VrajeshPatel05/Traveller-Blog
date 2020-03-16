@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Blogs</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="jquery-ui.min.css"
+	th:href="@{/css/jquery-ui.min.css}">
+<link rel="stylesheet" href="../static/css/style.css"
+	th:href="@{/css/style.css}">
+<script type="text/javascript" src="bs-custom-file-input.min.js"
+	th:src="@{js/bs-custom-file-input.min.js}"></script>
+<script type="text/javascript" th:src="@{js/bs-custom-file-input.js}"></script>
+<script type="text/javascript" th:src="@{js/jquery-3.4.1.min.js}"></script>
+</head>
+<body>
+	<div class="addnewpost">
+		<a href="#" th:href="@{/home}">
+			<button class="btn btn-info">Home</button>
+		</a>
+	</div>
+	<div class="addnewpost">
+		<a href="#" th:href="@{/post/newPost}">
+			<button class="btn btn-info">Add New Entry</button>
+		</a>
+	</div>
+
+	<h1 class="text-center" id="header">Blogs</h1>
+	<hr>
+	<div th:each="p : ${posts}">
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container">
+				<i>Posted on </i> <span
+					th:text="${#dates.format(p.date,'dd-MM-YYYY')}">21-03-2020</span> <i>by</i>
+				<b><span th:text="${p.name}">Eliza Taylor</span></b>
+				<p th:utext="${p.description}">This is sample</p>
+
+				<img th:attr="src=@{'/post/image/'+${p.imagePath}}"><br>
+				<br> <a href="#"
+					th:href="@{'/post/editPost/{id}'(id=${p.postId})}">
+					<button type="button" class="btn btn-primary" th:text="Edit">Edit</button>
+				</a> <a href="#" th:href="@{'/post/deletePost/{id}'(id=${p.postId})}">
+					<button type="button" class="btn btn-danger" th:text="Delete">Delete</button>
+				</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
